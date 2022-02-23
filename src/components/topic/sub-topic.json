@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_topic_sub_topics",
+  "info": {
+    "displayName": "subTopic",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "subTopicName": {
+      "type": "string"
+    },
+    "subTopicDescription": {
+      "type": "richtext"
+    }
+  }
+}

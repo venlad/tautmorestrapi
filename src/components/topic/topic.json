@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_topic_topics",
+  "info": {
+    "displayName": "topic",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "topicName": {
+      "type": "string"
+    },
+    "topicDescription": {
+      "type": "richtext"
+    },
+    "subTopic": {
+      "displayName": "subTopic",
+      "type": "component",
+      "repeatable": true,
+      "component": "topic.sub-topic"
+    }
+  }
+}
