@@ -29,6 +29,24 @@
       "relation": "manyToOne",
       "target": "api::activity.activity",
       "inversedBy": "subjects"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "smallDescription": {
+      "type": "text"
     }
   }
 }

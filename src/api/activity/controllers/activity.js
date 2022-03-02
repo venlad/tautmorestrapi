@@ -19,8 +19,10 @@ module.exports = createCoreController(
         {
           ...query,
           populate: {
+            icon: true,
             subjects: {
               populate: {
+                icon: true,
                 chapters: {
                   populate: {
                     topic: {
@@ -37,8 +39,10 @@ module.exports = createCoreController(
               populate: {
                 activities: {
                   populate: {
+                    icon: true,
                     subjects: {
                       populate: {
+                        icon: true,
                         chapters: {
                           populate: {
                             topic: {

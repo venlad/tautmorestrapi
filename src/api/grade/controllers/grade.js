@@ -17,8 +17,10 @@ module.exports = createCoreController("api::grade.grade", ({ strapi }) => ({
       populate: {
         activities: {
           populate: {
+            icon: true,
             subjects: {
               populate: {
+                icon: true,
                 chapters: {
                   populate: {
                     topic: {

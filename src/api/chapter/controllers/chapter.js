@@ -33,8 +33,10 @@ module.exports = createCoreController("api::chapter.chapter", ({ strapi }) => ({
           populate: {
             activities: {
               populate: {
+                icon: true,
                 subjects: {
                   populate: {
+                    icon: true,
                     chapters: {
                       populate: {
                         topic: {

@@ -22,13 +22,27 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::grade.grade",
-      "inversedBy": "activities"
+      "mappedBy": "activities"
     },
     "subjects": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::subject.subject",
       "mappedBy": "activity"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

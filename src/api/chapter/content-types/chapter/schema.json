@@ -35,6 +35,10 @@
       "relation": "manyToOne",
       "target": "api::grade.grade",
       "inversedBy": "chapters"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

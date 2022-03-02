@@ -2,7 +2,8 @@
   "collectionName": "components_topic_topics",
   "info": {
     "displayName": "topic",
-    "icon": "align-justify"
+    "icon": "align-justify",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -17,6 +18,9 @@
       "type": "component",
       "repeatable": true,
       "component": "topic.sub-topic"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
