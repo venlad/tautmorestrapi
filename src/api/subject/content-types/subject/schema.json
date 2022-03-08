@@ -47,6 +47,10 @@
     },
     "smallDescription": {
       "type": "text"
+    },
+    "popularSubject": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
