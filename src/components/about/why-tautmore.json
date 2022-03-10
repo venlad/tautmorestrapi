@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_about_why_tautmores",
+  "info": {
+    "displayName": "whyTautmore",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}

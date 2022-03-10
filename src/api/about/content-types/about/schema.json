@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "about"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.hero"
+    },
+    "whyCards": {
+      "displayName": "whyCards",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.why-cards"
+    },
+    "whyTautmoreHeading": {
+      "type": "string"
+    },
+    "whyTautmoreButtonText": {
+      "type": "string"
+    },
+    "tautMoreFeatures": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.hero"
+    },
+    "works": {
+      "displayName": "works",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.works"
+    },
+    "carousel": {
+      "displayName": "carousel",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.carousel"
+    },
+    "FAQ": {
+      "displayName": "FAQ",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.faq"
+    }
+  }
+}

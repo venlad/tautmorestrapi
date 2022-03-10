@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_about_carousels",
+  "info": {
+    "displayName": "carousel",
+    "icon": "dice-d6"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "carouselcard": {
+      "displayName": "carouselCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.carousel-card"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    }
+  }
+}

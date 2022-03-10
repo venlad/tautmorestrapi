@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "icon": "arrow-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_why_cards",
+  "info": {
+    "displayName": "whyCards",
+    "icon": "arrow-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "listItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.list-items"
+    }
+  }
+}

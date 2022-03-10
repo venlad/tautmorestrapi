@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_about_works",
+  "info": {
+    "displayName": "works",
+    "icon": "balance-scale"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "/"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "listItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.list-items"
+    }
+  }
+}
