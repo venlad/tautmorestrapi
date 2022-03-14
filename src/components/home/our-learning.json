@@ -1,8 +1,9 @@
 {
   "collectionName": "components_home_our_learnings",
   "info": {
-    "displayName": "ourLearning",
-    "icon": "adjust"
+    "displayName": "Layout 2",
+    "icon": "quote-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -17,6 +18,9 @@
       "type": "component",
       "repeatable": true,
       "component": "home.activities"
+    },
+    "videoUrl": {
+      "type": "string"
     }
   }
 }

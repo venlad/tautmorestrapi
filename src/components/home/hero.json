@@ -1,8 +1,9 @@
 {
   "collectionName": "components_home_heroes",
   "info": {
-    "displayName": "hero",
-    "icon": "angry"
+    "displayName": "Layout 1",
+    "icon": "quote-left",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,14 +14,15 @@
       "type": "text"
     },
     "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "buttonText": {
       "type": "string"
@@ -33,6 +35,9 @@
       "type": "component",
       "repeatable": true,
       "component": "home.list-items"
+    },
+    "videoUrl": {
+      "type": "string"
     }
   }
 }

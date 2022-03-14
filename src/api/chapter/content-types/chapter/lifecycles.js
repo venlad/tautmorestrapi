@@ -29,10 +29,6 @@ module.exports = {
     const { result, params } = event;
 
     // do something to the result;
-
-    console.log(result, "EVENT");
-    console.log("RUNNED");
-
     await axios
       .put(`http://localhost:1337/api/chapters/${result.id}`, {
         data: {
@@ -56,7 +52,34 @@ module.exports = {
         if (res.status === 200) console.log("success");
       })
       .catch((err) => console.log(err.message));
+  },
 
-    console.log("BOTTom");
+  async afterUpdate(event) {
+    const { result, params } = event;
+
+    // do something to the result;
+    await axios
+      .put(`http://localhost:1337/api/chapters/${result.id}`, {
+        data: {
+          topic: result.topic.map((item) => {
+            return {
+              topicName: item?.topicName,
+              topicDescription: item?.topicDescription,
+              slug: string_to_slug(item.topicName),
+              subTopic: item.subTopic.map((sub) => {
+                return {
+                  subTopicName: sub?.subTopicName,
+                  subTopicDescription: sub?.subTopicDescription,
+                  slug: string_to_slug(sub.subTopicName),
+                };
+              }),
+            };
+          }),
+        },
+      })
+      .then((res) => {
+        if (res.status === 200) console.log("success");
+      })
+      .catch((err) => console.log(err.message));
   },
 };

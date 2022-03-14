@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "about"
+    "displayName": "About Teacher",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -50,6 +51,9 @@
       "type": "component",
       "repeatable": true,
       "component": "about.faq"
+    },
+    "whyTautmoreButtonLink": {
+      "type": "string"
     }
   }
 }
