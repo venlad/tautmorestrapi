@@ -65,12 +65,12 @@ module.exports = {
             return {
               topicName: item?.topicName,
               topicDescription: item?.topicDescription,
-              slug: string_to_slug(item.topicName),
+              slug: item?.slug || string_to_slug(item.topicName),
               subTopic: item.subTopic.map((sub) => {
                 return {
                   subTopicName: sub?.subTopicName,
                   subTopicDescription: sub?.subTopicDescription,
-                  slug: string_to_slug(sub.subTopicName),
+                  slug: sub?.slug || string_to_slug(sub.subTopicName),
                 };
               }),
             };
