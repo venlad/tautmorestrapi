@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_parent_testimonials",
+  "info": {
+    "displayName": "testimonials",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "info": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -21,6 +21,12 @@
     },
     "videoUrl": {
       "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_parent_sections",
+  "info": {
+    "displayName": "section",
+    "icon": "align-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    }
+  }
+}

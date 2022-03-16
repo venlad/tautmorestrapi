@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_parents",
+  "info": {
+    "singularName": "about-parent",
+    "pluralName": "about-parents",
+    "displayName": "About Parent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.hero"
+    },
+    "sectionHeading1": {
+      "type": "string",
+      "default": "Why does your kid need TautMore?"
+    },
+    "sections": {
+      "displayName": "section",
+      "type": "component",
+      "repeatable": true,
+      "component": "parent.section"
+    },
+    "sectionHeading2": {
+      "type": "string"
+    },
+    "benefitsSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.our-learning"
+    },
+    "testimonials": {
+      "displayName": "testimonials",
+      "type": "component",
+      "repeatable": true,
+      "component": "parent.testimonials"
+    },
+    "carousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.carousel"
+    },
+    "FAQ": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about.faq"
+    }
+  }
+}
