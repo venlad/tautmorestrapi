@@ -4,7 +4,7 @@
   "info": {
     "singularName": "activity",
     "pluralName": "activities",
-    "displayName": "activity",
+    "displayName": "Activities",
     "description": ""
   },
   "options": {
@@ -35,14 +35,15 @@
       "targetField": "title"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

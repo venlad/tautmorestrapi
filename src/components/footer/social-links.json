@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_footer_social_links",
+  "info": {
+    "displayName": "socialLinks",
+    "icon": "at",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "className": {
+      "type": "string"
+    }
+  }
+}
