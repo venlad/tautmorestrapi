@@ -20,10 +20,15 @@ module.exports = createCoreController("api::subject.subject", ({ strapi }) => ({
           populate: {
             topic: {
               populate: {
-                subTopic: true,
+                subTopic: {
+                  populate:{
+                    section: true
+                  }
+                },
               },
             },
             grade: true,
+            subject: true
           },
         },
         activity: {

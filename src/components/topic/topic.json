@@ -21,6 +21,9 @@
     },
     "slug": {
       "type": "string"
+    },
+    "topicNumber": {
+      "type": "string"
     }
   }
 }

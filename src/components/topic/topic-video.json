@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_topic_topic_videos",
+  "info": {
+    "displayName": "Topic Video",
+    "icon": "play",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "videoUrl": {
+      "type": "string"
+    },
+    "videoThumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "videoTitle": {
+      "type": "string"
+    },
+    "videoDuration": {
+      "type": "biginteger"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Video",
+        "GIF"
+      ],
+      "default": "Video"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_topic_sub_topic_sections",
+  "info": {
+    "displayName": "subTopicSection",
+    "icon": "band-aid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "serialNumber": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Video",
+        "GIF"
+      ],
+      "default": "Video"
+    },
+    "videoTitle": {
+      "type": "string"
+    }
+  }
+}
