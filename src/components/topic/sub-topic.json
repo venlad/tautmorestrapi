@@ -8,7 +8,8 @@
   "options": {},
   "attributes": {
     "subTopicName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subTopicDescription": {
       "type": "richtext"
@@ -22,7 +23,7 @@
     "section": {
       "type": "component",
       "repeatable": true,
-      "component": "topic.sub-topic-section"
+      "component": "topic.section"
     }
   }
 }

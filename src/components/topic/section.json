@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_topic_sections",
+  "info": {
+    "displayName": "section",
+    "icon": "arrows-alt-h",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "serialNumber": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Video",
+        "GIF"
+      ],
+      "default": "Video"
+    },
+    "videoTitle": {
+      "type": "string"
+    },
+    "forMedia": {
+      "type": "richtext"
+    }
+  }
+}

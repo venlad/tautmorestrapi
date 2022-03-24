@@ -8,7 +8,8 @@
   "options": {},
   "attributes": {
     "topicName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "topicDescription": {
       "type": "richtext"

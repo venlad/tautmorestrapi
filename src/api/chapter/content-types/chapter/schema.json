@@ -41,7 +41,8 @@
       "targetField": "title"
     },
     "chapterNumber": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
