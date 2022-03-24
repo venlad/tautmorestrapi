@@ -21,7 +21,13 @@ module.exports = createCoreController("api::chapter.chapter", ({ strapi }) => ({
               populate: {
                 topic: {
                   populate: {
-                    subTopic: true,
+                    subTopic: {
+                  populate:{
+                    section: {
+                      thumbnail: true,
+                    }
+                  }
+                },
                   },
                 },
                 grade: true,
@@ -42,7 +48,13 @@ module.exports = createCoreController("api::chapter.chapter", ({ strapi }) => ({
                       populate: {
                         topic: {
                           populate: {
-                            subTopic: true,
+                            subTopic: {
+                  populate:{
+                    section: {
+                      thumbnail: true,
+                    }
+                  }
+                },
                           },
                         },
                         grade: true,
