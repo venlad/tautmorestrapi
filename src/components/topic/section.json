@@ -19,23 +19,6 @@
     },
     "serialNumber": {
       "type": "string"
-    },
-    "videoUrl": {
-      "type": "string"
-    },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Video",
-        "GIF"
-      ],
-      "default": "Video"
-    },
-    "videoTitle": {
-      "type": "string"
-    },
-    "forMedia": {
-      "type": "richtext"
     }
   }
 }

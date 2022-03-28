@@ -10,16 +10,8 @@
     "videoUrl": {
       "type": "string"
     },
-    "videoThumbnail": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "forMedia": {
+      "type": "richtext"
     },
     "videoTitle": {
       "type": "string"

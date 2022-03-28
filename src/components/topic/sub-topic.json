@@ -20,6 +20,11 @@
     "subTopicNumber": {
       "type": "string"
     },
+    "videoAndMedia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "topic.topic-video"
+    },
     "section": {
       "type": "component",
       "repeatable": true,

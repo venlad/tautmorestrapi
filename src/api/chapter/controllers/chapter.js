@@ -15,6 +15,16 @@ module.exports = createCoreController("api::chapter.chapter", ({ strapi }) => ({
     const entity = await strapi.entityService.findMany("api::chapter.chapter", {
       ...query,
       populate: {
+        topic: {
+          populate: {
+            subTopic: {
+              populate:{
+                section: true,
+                videoAndMedia: true
+              }
+            },
+          },
+        },
         subject: {
           populate: {
             chapters: {
@@ -23,9 +33,8 @@ module.exports = createCoreController("api::chapter.chapter", ({ strapi }) => ({
                   populate: {
                     subTopic: {
                       populate:{
-                        section: {
-                          thumbnail: true,
-                        }
+                        section: true,
+                        videoAndMedia: true
                       }
                     },
                   },
@@ -50,9 +59,8 @@ module.exports = createCoreController("api::chapter.chapter", ({ strapi }) => ({
                           populate: {
                             subTopic: {
                               populate:{
-                                section: {
-                                  thumbnail: true,
-                                }
+                                section: true,
+                                videoAndMedia: true
                               }
                             },
                           },

@@ -22,9 +22,8 @@ module.exports = createCoreController("api::subject.subject", ({ strapi }) => ({
               populate: {
                 subTopic: {
                   populate:{
-                    section: {
-                      thumbnail: true,
-                    }
+                    section: true,
+                videoAndMedia: true
                   }
                 },
               },
@@ -44,9 +43,8 @@ module.exports = createCoreController("api::subject.subject", ({ strapi }) => ({
                       populate: {
                         subTopic: {
                           populate:{
-                            section: {
-                              thumbnail: true,
-                            }
+                            section: true,
+                videoAndMedia: true
                           }
                         },
                       },
