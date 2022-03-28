@@ -7,7 +7,7 @@ module.exports = {
 
     // do something to the result;
     result.topic && await axios
-      .put(`https://tautmore-strapi.herokuapp.com/api/chapters/${result.id}`, {
+      .put(`https://tautmore.herokuapp.com/api/chapters/${result.id}`, {
         data: {
           topic: result.topic.map((item) => {
             return {
@@ -33,7 +33,7 @@ module.exports = {
     const { result } = event;
     // do something to the result;
     result.topic && await axios
-    .put(`https://tautmore-strapi.herokuapp.com/api/chapters/${result.id}`, {
+    .put(`https://tautmore.herokuapp.com/api/chapters/${result.id}`, {
       data: {
         topic: result.topic.map((item, i) => {
           return {
