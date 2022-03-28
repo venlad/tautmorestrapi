@@ -9,8 +9,6 @@ const path = require('path');
 //     useNullAsDefault: true,
 //   },
 // });
-
-
 postgres: module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
@@ -28,7 +26,5 @@ postgres: module.exports = ({ env }) => ({
     debug: false,
   },
 });
-
-
 
 // postgres://ymsiuqqqkdadvd:0774a87650635b40302d8c7ac8700a67a588c3fdc35dc06db659c62837bdd73f@ec2-52-201-124-168.compute-1.amazonaws.com:5432/d716h515rqcb1r
