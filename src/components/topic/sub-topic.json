@@ -29,6 +29,18 @@
       "type": "component",
       "repeatable": true,
       "component": "topic.section"
+    },
+    "takeTestButton1": {
+      "type": "string"
+    },
+    "takeTestButton1link": {
+      "type": "string"
+    },
+    "takeTestButton2": {
+      "type": "string"
+    },
+    "takeTestButton2link": {
+      "type": "string"
     }
   }
 }
