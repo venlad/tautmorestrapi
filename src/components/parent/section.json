@@ -32,6 +32,10 @@
     },
     "buttonUrl": {
       "type": "string"
+    },
+    "videoPopup": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
