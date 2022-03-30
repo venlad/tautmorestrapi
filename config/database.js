@@ -15,12 +15,12 @@ postgres: module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
     connection: {
-      host: "ec2-52-201-124-168.compute-1.amazonaws.com",
+      host: "ec2-18-214-134-226.compute-1.amazonaws.com",
       port: 5432,
-      database: "d716h515rqcb1r",
-      user: "ymsiuqqqkdadvd",
+      database: "d34pkmr7t8sucd",
+      user: "vdxycadlzygxmz",
       password:
-        "0774a87650635b40302d8c7ac8700a67a588c3fdc35dc06db659c62837bdd73f",
+        "fcaa6fdeef2803fb09a614cd5dba7e9003872a06c5e71c7fd744426ca59d4f63",
       ssl: {
         rejectUnauthorized: false,
       },
@@ -28,3 +28,6 @@ postgres: module.exports = ({ env }) => ({
     debug: false,
   },
 });
+
+
+// postgres://vdxycadlzygxmz:fcaa6fdeef2803fb09a614cd5dba7e9003872a06c5e71c7fd744426ca59d4f63@ec2-18-214-134-226.compute-1.amazonaws.com:5432/d34pkmr7t8sucd
