@@ -16,15 +16,9 @@
     "videoTitle": {
       "type": "string"
     },
-    "videoDuration": {
-      "type": "biginteger"
-    },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "Video",
-        "GIF"
-      ],
+      "enum": ["Video", "GIF"],
       "default": "Video"
     }
   }

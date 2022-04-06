@@ -17,7 +17,8 @@
       "displayName": "activities",
       "type": "component",
       "repeatable": true,
-      "component": "home.activities"
+      "component": "home.activities",
+      "max": 4
     },
     "videoUrl": {
       "type": "string"

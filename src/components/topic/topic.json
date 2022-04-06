@@ -11,9 +11,6 @@
       "type": "string",
       "required": true
     },
-    "topicDescription": {
-      "type": "richtext"
-    },
     "subTopic": {
       "displayName": "subTopic",
       "type": "component",

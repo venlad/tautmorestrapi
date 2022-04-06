@@ -11,9 +11,6 @@
       "type": "string",
       "required": true
     },
-    "subTopicDescription": {
-      "type": "richtext"
-    },
     "slug": {
       "type": "string"
     },
@@ -34,12 +31,6 @@
       "type": "string"
     },
     "takeTestButton1link": {
-      "type": "string"
-    },
-    "takeTestButton2": {
-      "type": "string"
-    },
-    "takeTestButton2link": {
       "type": "string"
     }
   }

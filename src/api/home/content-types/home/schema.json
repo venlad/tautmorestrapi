@@ -27,13 +27,15 @@
     "numberInfo": {
       "type": "component",
       "repeatable": true,
-      "component": "home.activities"
+      "component": "home.activities",
+      "max": 4
     },
     "sections": {
       "type": "dynamiczone",
       "components": [
         "home.hero",
-        "home.our-learning"
+        "home.our-learning",
+        "home.layout3"
       ]
     }
   }

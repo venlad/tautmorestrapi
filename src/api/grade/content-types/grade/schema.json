@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "activities": {
       "type": "relation",
       "relation": "manyToMany",

@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "subject": {
       "type": "relation",
       "relation": "manyToOne",

@@ -21,7 +21,8 @@
       "displayName": "whyCards",
       "type": "component",
       "repeatable": true,
-      "component": "about.why-cards"
+      "component": "about.why-cards",
+      "max": 6
     },
     "whyTautmoreHeading": {
       "type": "string"
@@ -54,6 +55,11 @@
     },
     "whyTautmoreButtonLink": {
       "type": "string"
+    },
+    "tautMoreWorks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.layout3"
     }
   }
 }

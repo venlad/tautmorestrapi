@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "chapters": {
       "type": "relation",
       "relation": "oneToMany",
@@ -38,19 +35,10 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "smallDescription": {
       "type": "text"
-    },
-    "popularSubject": {
-      "type": "boolean",
-      "default": false
     }
   }
 }
