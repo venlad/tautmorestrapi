@@ -55,11 +55,6 @@
     },
     "whyTautmoreButtonLink": {
       "type": "string"
-    },
-    "tautMoreWorks": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home.layout3"
     }
   }
 }

@@ -22,7 +22,8 @@
     "listItems": {
       "type": "component",
       "repeatable": true,
-      "component": "home.list-items"
+      "component": "home.list-items",
+      "max": 3
     }
   }
 }
