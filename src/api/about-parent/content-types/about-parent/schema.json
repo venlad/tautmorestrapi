@@ -25,7 +25,8 @@
       "displayName": "section",
       "type": "component",
       "repeatable": true,
-      "component": "parent.section"
+      "component": "parent.section",
+      "max": 8
     },
     "sectionHeading2": {
       "type": "string"

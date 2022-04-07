@@ -32,11 +32,8 @@
     },
     "sections": {
       "type": "dynamiczone",
-      "components": [
-        "home.hero",
-        "home.our-learning",
-        "home.layout3"
-      ]
+      "max": 8,
+      "components": ["home.hero", "home.our-learning", "home.layout3"]
     }
   }
 }
