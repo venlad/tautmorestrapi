@@ -60,10 +60,10 @@ module.exports = {
                         serialNumber: `${k + 1}`,
                       };
                     }),
-                    videoAndMedia: sub?.videoAndMedia.map((video, l) => {
+                    videoAndMedia: sub?.videoAndMedia.map((video) => {
                       return{
                         ...video,
-                        videoUrl: video?.forMedia?.replace(/(\[.*?\])/g, "").replace("(","").replace(")","").replace("!","")
+                        videoUrl: video.forMedia.replace(/(\[.*?\])/g, "").replace("(","").replace(")","").replace("!","")
                       }
                     })
                   };
