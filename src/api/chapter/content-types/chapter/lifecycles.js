@@ -1,3 +1,4 @@
+
 const axios = require("axios");
 const slugify = require("slugify");
 
@@ -45,6 +46,7 @@ module.exports = {
                 topicNumber: `${result?.chapterNumber}.${i + 1}`,
                 slug: item?.slug || slugify(item?.topicName, { lower: true }),
                 subTopic: item.subTopic.map((sub, j) => {
+                  console.log(sub)
                   return {
                     ...sub,
                     subTopicNumber: `${result?.chapterNumber}.${i + 1}.${
@@ -58,6 +60,12 @@ module.exports = {
                         serialNumber: `${k + 1}`,
                       };
                     }),
+                    videoAndMedia: sub?.videoAndMedia.map((video, l) => {
+                      return{
+                        ...video,
+                        videoUrl: video?.forMedia?.replace(/(\[.*?\])/g, "").replace("(","").replace(")","").replace("!","")
+                      }
+                    })
                   };
                 }),
               };

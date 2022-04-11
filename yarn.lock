@@ -1579,6 +1579,23 @@
     tar "6.1.11"
     uuid "^3.3.2"
 
+"@strapi/generate-new@^4.1.7":
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/@strapi/generate-new/-/generate-new-4.1.7.tgz#559a8776ea1a24c39a9e6670f72a04bf687915fe"
+  integrity sha512-zl0veo1M/6HpUYrZmr1goqJ79lLYNcz+1kBdO2fK/ZNQYj+dEq6nIgb7k4Fg/2lxyK9WqkZmAvkGu67iGjMZZg==
+  dependencies:
+    "@sentry/node" "6.3.0"
+    chalk "^4.1.1"
+    execa "^1.0.0"
+    fs-extra "10.0.0"
+    inquirer "8.2.0"
+    lodash "4.17.21"
+    node-fetch "^2.6.1"
+    node-machine-id "^1.1.10"
+    ora "^5.4.0"
+    tar "6.1.11"
+    uuid "^3.3.2"
+
 "@strapi/generators@4.0.6":
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/@strapi/generators/-/generators-4.0.6.tgz#b3d4102858b70f8424f153191eafcdf865dfb58a"
