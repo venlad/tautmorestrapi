@@ -63,7 +63,7 @@ module.exports = {
                     videoAndMedia: sub?.videoAndMedia.map((video) => {
                       return{
                         ...video,
-                        videoUrl: video.forMedia.replace(/(\[.*?\])/g, "").replace("(","").replace(")","").replace("!","")
+                        videoUrl:  video?.videoUrl || video.forMedia.replace(/(\[.*?\])/g, "").replace("(","").replace(")","").replace("!","")
                       }
                     })
                   };
