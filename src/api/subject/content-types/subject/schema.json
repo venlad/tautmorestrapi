@@ -27,6 +27,12 @@
       "target": "api::activity.activity",
       "inversedBy": "subjects"
     },
+    "grade": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::grade.grade",
+      "inversedBy": "chapters"
+    },
     "slug": {
       "type": "uid",
       "targetField": "title"
