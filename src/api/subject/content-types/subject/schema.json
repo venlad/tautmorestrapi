@@ -27,12 +27,6 @@
       "target": "api::activity.activity",
       "inversedBy": "subjects"
     },
-    "grade": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::grade.grade",
-      "inversedBy": "chapters"
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -41,10 +35,21 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "smallDescription": {
       "type": "text"
+    },
+    "grades": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::grade.grade",
+      "mappedBy": "subjects"
     }
   }
 }

@@ -30,6 +30,18 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "co_corriculars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::co-corricular.co-corricular",
+      "mappedBy": "grades"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject.subject",
+      "inversedBy": "grades"
     }
   }
 }
