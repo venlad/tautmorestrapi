@@ -21,12 +21,6 @@
       "target": "api::chapter.chapter",
       "mappedBy": "subject"
     },
-    "activity": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::activity.activity",
-      "inversedBy": "subjects"
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"

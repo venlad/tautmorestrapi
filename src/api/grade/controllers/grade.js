@@ -45,26 +45,7 @@ module.exports = createCoreController("api::grade.grade", ({ strapi }) => ({
             },
           },
         },
-        activities: {
-          populate: {
-            icon: true,
-            subjects: {
-              populate: {
-                icon: true,
-                chapters: {
-                  populate: {
-                    topic: {
-                      populate: {
-                        subTopic: true,
-                      },
-                    },
-                    grade: true,
-                  },
-                },
-              },
-            },
-          },
-        },
+        
       },
     });
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);

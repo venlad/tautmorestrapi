@@ -47,32 +47,7 @@ module.exports = createCoreController("api::chapter.chapter", ({ strapi }) => ({
         },
         grade: {
           populate: {
-            activities: {
-              populate: {
-                icon: true,
-                subjects: {
-                  populate: {
-                    icon: true,
-                    chapters: {
-                      populate: {
-                        topic: {
-                          populate: {
-                            subTopic: {
-                              populate:{
-                                section: true,
-                                videoAndMedia: true
-                              }
-                            },
-                          },
-                        },
-                        grade: true,
-                        subject: true,
-                      },
-                    },
-                  },
-                },
-              },
-            },
+            
           },
         },
       },

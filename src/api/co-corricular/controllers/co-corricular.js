@@ -32,30 +32,7 @@ module.exports = createCoreController("api::co-corricular.co-corricular", ({ str
               subject: true
             },
           },
-          activity: {
-            populate: {
-              subjects: {
-                populate: {
-                  icon: true,
-                  chapters: {
-                    populate: {
-                      topic: {
-                        populate: {
-                          subTopic: {
-                            populate:{
-                              section: true,
-                  videoAndMedia: true
-                            }
-                          },
-                        },
-                      },
-                      grade: true,
-                    },
-                  },
-                },
-              },
-            },
-          },
+        
         },
       });
       const sanitizedEntity = await this.sanitizeOutput(entity, ctx);

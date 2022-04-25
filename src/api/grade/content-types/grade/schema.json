@@ -15,12 +15,6 @@
     "title": {
       "type": "string"
     },
-    "activities": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::activity.activity",
-      "inversedBy": "grades"
-    },
     "chapters": {
       "type": "relation",
       "relation": "oneToMany",
