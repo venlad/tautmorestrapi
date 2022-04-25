@@ -47,9 +47,14 @@
       "target": "api::co-corricular.co-corricular",
       "inversedBy": "chapters"
     },
-    "coCorricular": {
-      "type": "boolean",
-      "default": false
+    "isCoCorricular": {
+      "type": "enumeration",
+      "enum": [
+        "subject",
+        "coCorricular"
+      ],
+      "default": "subject",
+      "required": true
     }
   }
 }
