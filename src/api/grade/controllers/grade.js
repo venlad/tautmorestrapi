@@ -15,6 +15,7 @@ module.exports = createCoreController("api::grade.grade", ({ strapi }) => ({
     const entity = await strapi.entityService.findMany("api::grade.grade", {
       ...query,
       populate: {
+        boards: true,
         subjects:{
           populate: {
             icon: true,
