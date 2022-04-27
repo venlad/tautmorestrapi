@@ -32,11 +32,17 @@
         "videos"
       ]
     },
-    "grades": {
+    "chapters": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::grade.grade",
+      "target": "api::chapter.chapter",
       "mappedBy": "board"
+    },
+    "grades": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::grade.grade",
+      "inversedBy": "boards"
     }
   }
 }

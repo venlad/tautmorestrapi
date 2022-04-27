@@ -31,9 +31,9 @@
       "target": "api::subject.subject",
       "inversedBy": "grades"
     },
-    "board": {
+    "boards": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::board.board",
       "inversedBy": "grades"
     }
