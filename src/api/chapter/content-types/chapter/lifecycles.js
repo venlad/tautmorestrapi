@@ -40,8 +40,6 @@ module.exports = {
       (await axios
         .put(`${process.env.URL}/api/chapters/${result.id}`, {
           data: {
-            subject: result?.isCoCorricular === "subject" ? result.subject : null,
-            co_corricular: result?.isCoCorricular !== "subject" ? result.co_corricular : null,
             topic: result.topic.map((item, i) => {
               return {
                 ...item,

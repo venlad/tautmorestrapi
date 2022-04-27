@@ -40,21 +40,6 @@
     "chapterNumber": {
       "type": "string",
       "required": true
-    },
-    "co_corricular": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::co-corricular.co-corricular",
-      "inversedBy": "chapters"
-    },
-    "isCoCorricular": {
-      "type": "enumeration",
-      "enum": [
-        "subject",
-        "coCorricular"
-      ],
-      "default": "subject",
-      "required": true
     }
   }
 }
