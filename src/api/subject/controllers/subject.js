@@ -29,7 +29,8 @@ module.exports = createCoreController("api::subject.subject", ({ strapi }) => ({
               },
             },
             grade: true,
-            subject: true
+            subject: true,
+            board: true,
           },
         },
         
