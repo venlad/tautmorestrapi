@@ -14,6 +14,7 @@
 //   },
 // });
 
+// for deployed version
 postgres: module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
