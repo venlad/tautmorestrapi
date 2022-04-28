@@ -31,3 +31,5 @@ postgres: module.exports = ({ env }) => ({
     debug: false,
   },
 });
+
+postgres://nyhuzoizxjrxqp:8eb51cb297f4560546cd5ed709ce3047b546513efb37c7cef11fe6941b91c60d@ec2-3-209-124-113.compute-1.amazonaws.com:5432/d6nah83gj0lh9c
