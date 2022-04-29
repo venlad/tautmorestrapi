@@ -40,9 +40,9 @@
     },
     "grades": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::grade.grade",
-      "inversedBy": "boards"
+      "mappedBy": "board"
     }
   }
 }

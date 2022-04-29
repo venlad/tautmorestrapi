@@ -27,13 +27,13 @@
     },
     "subjects": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::subject.subject",
-      "inversedBy": "grades"
+      "mappedBy": "grade"
     },
-    "boards": {
+    "board": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::board.board",
       "inversedBy": "grades"
     }
