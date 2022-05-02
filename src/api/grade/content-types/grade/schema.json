@@ -36,6 +36,9 @@
       "relation": "manyToOne",
       "target": "api::board.board",
       "inversedBy": "grades"
+    },
+    "refName": {
+      "type": "string"
     }
   }
 }

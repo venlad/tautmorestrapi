@@ -3,7 +3,6 @@
 // module.exports = {
 //   async afterCreate(event) {
 //     const { result } = event;
-//     console.log(result);
 //     try {
 //       const res = await axios.post(
 //         "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/class/addClass",
@@ -17,6 +16,16 @@
 //         }
 //       );
 //       console.log(res.data);
+
+//       const refSlug = await axios.put(
+//         `${process.env.URL}/api/grades/${result.id}`,
+//         {
+//           data: {
+//             refName: `${result?.title} ( ${result?.board?.title} )`,
+//           },
+//         }
+//       );
+//       console.log(refSlug.data);
 //     } catch (error) {
 //       console.log(error);
 //     }

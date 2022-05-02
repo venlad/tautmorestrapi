@@ -18,13 +18,17 @@
 //       );
 //       console.log(res.data);
 
-//       const resSlug = await axios
-//         .put(`${process.env.URL}/api/subjects/${result.id}`, {
+//       const resSlug = await axios.put(
+//         `${process.env.URL}/api/subjects/${result.id}`,
+//         {
 //           data: {
-//             commonSlug: result.commonSlug || slugify(result.title, { lower: true })
+//             commonSlug:
+//               result.commonSlug || slugify(result.title, { lower: true }),
+//             refName: `${result?.title} - ${result?.grade?.title}  ( ${result?.grade?.board?.title} )`,
 //           },
-//         })
-//         console.log(resSlug.data)
+//         }
+//       );
+//       console.log(resSlug.data);
 //     } catch (error) {
 //       console.log(error);
 //     }
@@ -66,7 +70,6 @@
 //         );
 //         console.log(publishRes.data);
 //       }
-  
 //     } catch (error) {
 //       console.log(error);
 //     }
