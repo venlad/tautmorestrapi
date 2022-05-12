@@ -1,31 +1,26 @@
 const axios = require("axios");
 const slugify = require("slugify");
+const { uuid } = require("uuidv4");
+const { ForbiddenError } = require("@strapi/utils").errors;
 
 module.exports = {
+  async beforeCreate(event) {
+    console.log(event.params.data.topic);
+
+    if (event?.params?.data?.topic?.length > 0) {
+      throw new ForbiddenError("Save the chapter");
+    }
+  },
   async afterCreate(event) {
-    console.log(event);
     const { result } = event;
 
     try {
-      const res = await axios.post(
-        "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/addChapter",
-        {
-          name: result?.title,
-          internalSubjectId: result?.subject?.id,
-          internalChapterId: result?.id,
-          index: result?.chapterNumber,
-          description: "dummy description for test subject chapter-3",
-          moduleType: result?.module?.name,
-        }
-      );
-      console.log(res.data);
-
+      console.log("running");
       const topicsRes = await axios.put(
         `${process.env.URL}/api/chapters/${result.id}`,
         {
           data: {
-            grade: gradeRes?.data?.data,
-            board: boardRes?.data?.data,
+            uid: uuid(),
             topic: result.topic.map((item) => {
               return {
                 ...item,
@@ -43,6 +38,23 @@ module.exports = {
         }
       );
 
+      // if (result?.topic.length > 0) {
+      //   throw new Error("Save chapter first");
+      // }
+
+      // const res = await axios.post(
+      //   "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/addChapter",
+      //   {
+      //     name: result?.title,
+      //     internalSubjectId: result?.subject?.uid,
+      //     internalChapterId: result?.uid,
+      //     index: result?.chapterNumber,
+      //     description: "dummy description for test subject chapter-3",
+      //     moduleType: result?.module?.name,
+      //   }
+      // );
+      // console.log(res.data);
+
       console.log(topicsRes);
     } catch (error) {
       console.log(error);
@@ -53,40 +65,6 @@ module.exports = {
     const { result } = event;
 
     try {
-      const res = await axios.post(
-        "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/editChapter",
-        {
-          name: result?.title,
-          internalSubjectId: result?.subject?.id,
-          internalChapterId: result?.id,
-          index: result?.chapterNumber,
-          description: "dummy description for test subject chapter-3",
-          moduleType: result?.module?.name,
-        }
-      );
-      console.log(res.data);
-
-      const checkPublished = result?.publishedAt;
-      if (checkPublished !== null) {
-        const publishRes = await axios.post(
-          "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/change-chapter-status",
-          {
-            internalChapterId: result?.id,
-            status: true,
-          }
-        );
-        console.log(publishRes.data);
-      } else if (checkPublished === null) {
-        const publishRes = await axios.post(
-          "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/change-chapter-status",
-          {
-            internalChapterId: result?.id,
-            status: false,
-          }
-        );
-        console.log(publishRes.data);
-      }
-
       result.topic &&
         (await axios
           .put(`${process.env.URL}/api/chapters/${result.id}`, {
@@ -120,6 +98,40 @@ module.exports = {
             if (res.status === 200) console.log("success");
           })
           .catch((err) => console.log(err.message)));
+
+      const res = await axios.post(
+        "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/editChapter",
+        {
+          name: result?.title,
+          internalSubjectId: result?.subject?.uid,
+          internalChapterId: result?.uid,
+          index: result?.chapterNumber,
+          description: "dummy description for test subject chapter-3",
+          moduleType: result?.module?.name,
+        }
+      );
+      console.log(res.data);
+
+      const checkPublished = result?.publishedAt;
+      if (checkPublished !== null) {
+        const publishRes = await axios.post(
+          "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/change-chapter-status",
+          {
+            internalChapterId: result?.uid,
+            status: true,
+          }
+        );
+        console.log(publishRes.data);
+      } else if (checkPublished === null) {
+        const publishRes = await axios.post(
+          "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/change-chapter-status",
+          {
+            internalChapterId: result?.uid,
+            status: false,
+          }
+        );
+        console.log(publishRes.data);
+      }
     } catch (error) {
       console.log(error.message);
     }
@@ -132,7 +144,7 @@ module.exports = {
       const res = await axios.post(
         "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/chapters/delete-chapter",
         {
-          internalChapterId: result?.id,
+          internalChapterId: result?.uid,
         }
       );
       console.log(res.data);

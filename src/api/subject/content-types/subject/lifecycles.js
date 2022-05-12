@@ -1,34 +1,33 @@
 const axios = require("axios");
 const slugify = require("slugify");
+const { uuid } = require("uuidv4");
 
 module.exports = {
   async afterCreate(event) {
     const { result } = event;
 
     try {
+      const resSlug = await axios.put(
+        `${process.env.URL}/api/subjects/${result.id}`,
+        {
+          data: {
+            uid: uuid(),
+          },
+        }
+      );
+      console.log(resSlug.data);
+
       const res = await axios.post(
         "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/syllabus/addSubject",
         {
           name: result?.title,
-          internalSubjectId: result?.id,
-          internalGradeId: result?.grade?.id,
+          internalSubjectId: result?.uid,
+          internalGradeId: result?.grade?.uid,
           description: "description",
           logo: null,
         }
       );
       console.log(res.data);
-
-      const resSlug = await axios.put(
-        `${process.env.URL}/api/subjects/${result.id}`,
-        {
-          data: {
-            commonSlug:
-              result.commonSlug || slugify(result.title, { lower: true }),
-            refName: `${result?.title} - ${result?.grade?.title}  ( ${result?.grade?.board?.title} )`,
-          },
-        }
-      );
-      console.log(resSlug.data);
     } catch (error) {
       console.log(error);
     }
@@ -41,9 +40,9 @@ module.exports = {
       const res = await axios.post(
         "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/syllabus/editSubject",
         {
-          internalSubjectId: result?.id,
+          internalSubjectId: result?.uid,
           name: result?.title,
-          internalGradeId: result?.grade?.id,
+          internalGradeId: result?.grade?.uid,
           description: "description",
           logo: null,
         }
@@ -55,7 +54,7 @@ module.exports = {
         const publishRes = await axios.post(
           "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/syllabus/change-subject-status",
           {
-            internalSubjectId: result?.id,
+            internalSubjectId: result?.uid,
             status: true,
           }
         );
@@ -64,7 +63,7 @@ module.exports = {
         const publishRes = await axios.post(
           "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/syllabus/change-subject-status",
           {
-            internalSubjectId: result?.id,
+            internalSubjectId: result?.uid,
             status: false,
           }
         );
@@ -82,7 +81,7 @@ module.exports = {
       const res = await axios.post(
         "https://lbbhqlqib3.execute-api.us-east-1.amazonaws.com/development/api/syllabus/delete-subject",
         {
-          internalSubjectId: result?.id,
+          internalSubjectId: result?.uid,
         }
       );
       console.log(res.data);

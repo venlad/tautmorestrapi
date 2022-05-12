@@ -26,11 +26,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
+      "allowedTypes": ["images", "files", "videos"]
+    },
+    "uid": {
+      "type": "string",
+      "unique": true
     }
   }
 }

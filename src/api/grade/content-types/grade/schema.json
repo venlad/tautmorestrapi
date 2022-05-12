@@ -37,8 +37,9 @@
       "target": "api::board.board",
       "inversedBy": "grades"
     },
-    "refName": {
-      "type": "string"
+    "uid": {
+      "type": "string",
+      "unique": true
     }
   }
 }

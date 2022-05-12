@@ -41,6 +41,10 @@
     "publish": {
       "type": "boolean",
       "default": false
+    },
+    "uid": {
+      "type": "string",
+      "unique": true
     }
   }
 }
