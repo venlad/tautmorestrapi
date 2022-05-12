@@ -13,6 +13,14 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
+      "type": "string",
+      "required": true
+    },
+    "refName": {
+      "type": "string",
+      "required": true
+    },
+    "commonSlug": {
       "type": "string"
     },
     "chapters": {
@@ -39,11 +47,11 @@
     "smallDescription": {
       "type": "text"
     },
-    "grades": {
+    "grade": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::grade.grade",
-      "mappedBy": "subjects"
+      "inversedBy": "subjects"
     }
   }
 }

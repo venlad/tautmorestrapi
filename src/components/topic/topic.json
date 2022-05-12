@@ -22,6 +22,14 @@
     },
     "topicNumber": {
       "type": "string"
+    },
+    "create": {
+      "type": "boolean",
+      "required": true
+    },
+    "publish": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

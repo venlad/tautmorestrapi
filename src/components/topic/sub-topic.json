@@ -32,6 +32,15 @@
     },
     "takeTestButton1link": {
       "type": "string"
+    },
+    "create": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "publish": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
