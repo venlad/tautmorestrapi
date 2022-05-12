@@ -46,6 +46,12 @@
       "relation": "manyToOne",
       "target": "api::board.board",
       "inversedBy": "chapters"
+    },
+    "module": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::module.module",
+      "inversedBy": "chapters"
     }
   }
 }
