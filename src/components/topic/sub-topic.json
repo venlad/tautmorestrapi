@@ -35,8 +35,7 @@
     },
     "create": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "default": false
     },
     "publish": {
       "type": "boolean",
